@@ -1,11 +1,49 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+	title="Sidecar Brand Consultancy | Private Walkthrough"
+	description="Get the private walkthrough on how a sidecar brand turns audience attention into steadier monthly revenue."
+>
+	<main class="min-h-screen bg-white text-black">
+		<div class="mx-auto max-w-6xl px-5 py-6 md:px-8 md:py-8">
+			<section class="border-4 border-black bg-white px-6 py-10 md:px-10 md:py-14">
+				<p class="text-[11px] font-bold uppercase tracking-[0.28em] text-slate-700">
+					For founders with attention but inconsistent revenue
+				</p>
+				<h1 class="mt-4 max-w-4xl font-serif text-4xl leading-none md:text-7xl">
+					If your business still has shaky months, you need a sidecar brand.
+				</h1>
+				<p class="mt-5 max-w-3xl text-base leading-7 text-slate-700 md:text-xl">
+					Enter your email and I will send you to the private walkthrough showing how a newsletter,
+					a self-liquidating offer, and simple monetization layers make revenue feel a lot less fragile.
+				</p>
+				<form action="/walkthrough" method="GET" class="mt-8 max-w-3xl space-y-3">
+					<label class="block text-[11px] font-bold uppercase tracking-[0.28em] text-slate-600" for="email">
+						Email
+					</label>
+					<div class="grid gap-3 md:grid-cols-[minmax(0,1fr)_320px]">
+						<input
+							id="email"
+							name="email"
+							type="email"
+							required
+							placeholder="you@company.com"
+							class="w-full border-4 border-black px-4 py-4 text-lg outline-none placeholder:text-slate-400 focus:bg-stone-50"
+						/>
+						<button
+							type="submit"
+							class="inline-flex w-full items-center justify-center border-4 border-black bg-teal-500 px-5 py-4 text-center text-base font-bold uppercase tracking-[0.14em] text-black transition hover:bg-teal-400"
+						>
+							Send Me The Walkthrough
+						</button>
+					</div>
+					<p class="text-sm leading-6 text-slate-600">
+						You will see the walkthrough immediately after submitting. No long opt-in maze.
+					</p>
+				</form>
+			</section>
+		</div>
+	</main>
 </Layout>
