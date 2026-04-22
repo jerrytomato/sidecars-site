@@ -4,12 +4,16 @@ import '../styles/global.css';
 interface Props {
 	title?: string;
 	description?: string;
+	robots?: string;
+	googlebot?: string;
 }
 
 const {
 	title = 'Sidecar Brand Consultancy',
 	description =
 		'We build sidecar brands: newsletter + self-liquidating offer + partner and affiliate monetization for predictable monthly revenue.',
+	robots,
+	googlebot,
 } = Astro.props;
 ---
 
@@ -23,6 +27,8 @@ const {
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<meta name="description" content={description} />
+		{robots && <meta name="robots" content={robots} />}
+		{googlebot && <meta name="googlebot" content={googlebot} />}
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:type" content="website" />

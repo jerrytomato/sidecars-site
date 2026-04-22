@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+export const prerender = false;
+
 const email = Astro.url.searchParams.get('email')?.trim() ?? '';
 const safeEmail = email || 'your inbox';
 ---
@@ -8,6 +10,8 @@ const safeEmail = email || 'your inbox';
 <Layout
 	title="Private Walkthrough | Sidecar Brand Consultancy"
 	description="Watch the sidecar brand walkthrough and take the next step if you want help building your own."
+	robots="noindex, nofollow, noarchive, nosnippet"
+	googlebot="noindex, nofollow, noarchive, nosnippet"
 >
 	<main class="min-h-screen bg-white text-black">
 		<div class="mx-auto max-w-6xl px-5 py-6 md:px-8 md:py-8">
